@@ -8,4 +8,17 @@ function getStringLength (charset, maxlength) {
   }
 }
 
+// 2. Проверка на палиндром
+function checkPalindrome(str) {
+  let normalizeString = str.replaceAll().toLowerCase();
+  let reverseString = normalizeString.split('').reverse().join('');
+  if (normalizeString !== reverseString) {
+    console.log('Строка - не палиндром');
+  } else {
+    console.log('Строка -  палиндром');
+  }
+}
+
+// Здесь вызовы функций
 getStringLength('аff', 10);
+checkPalindrome('Топот');
